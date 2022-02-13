@@ -1,3 +1,8 @@
+## kubernetesクラスタとkubectlのバージョン確認
+```
+kubectl version
+```
+
 ## Context一覧を取得する
 ```
 kubectl config get-contexts
