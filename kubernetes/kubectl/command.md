@@ -24,3 +24,7 @@ kubectl api-resources --namespaced=true
 # Namespaceに属していないリソース
 kubectl api-resources --namespaced=false
 ```
+## すべてのリソース一覧を取得
+```
+kubectl get $(kubectl api-resources --namespaced=true --verbs=list -o name |tr '\n' ',' |sed -e 's|,$||g')
+```
